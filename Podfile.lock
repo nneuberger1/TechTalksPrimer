@@ -1,4 +1,13 @@
 PODS:
+  - AWSCognitoIdentityProvider (2.12.1):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.12.1)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.12.1)
+  - AWSDynamoDB (2.12.1):
+    - AWSCore (= 2.12.1)
+  - AWSIoT (2.12.1):
+    - AWSCore (= 2.12.1)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -22,15 +31,29 @@ PODS:
   - SwifterSwift/UIKit (5.1.0)
 
 DEPENDENCIES:
+  - AWSCognitoIdentityProvider (~> 2.12.0)
+  - AWSCore (~> 2.12.0)
+  - AWSDynamoDB (~> 2.12.0)
+  - AWSIoT (~> 2.12.0)
   - SwifterSwift
 
 SPEC REPOS:
   trunk:
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSDynamoDB
+    - AWSIoT
     - SwifterSwift
 
 SPEC CHECKSUMS:
+  AWSCognitoIdentityProvider: 4b453fa8ae677dd9646fe5cb137b520105f33d08
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: 0a4431f74d9dbf084d420b887a6a21042b423c5c
+  AWSDynamoDB: 517a859d6b4615ca8f7e78f03bd33e3ad955d539
+  AWSIoT: f8e75c66fa89d99c4496a34137d7204f5e2cbda9
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: 6bfb4a02677fb770cbf6c6b4e970b2631f73b05e
+PODFILE CHECKSUM: 6700da17c5f865189d4f7087fab569110ff30813
 
 COCOAPODS: 1.8.4
