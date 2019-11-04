@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.0-rc.3)
   - AWSCognitoIdentityProvider (2.12.1):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
     - AWSCore (= 2.12.1)
@@ -31,6 +32,7 @@ PODS:
   - SwifterSwift/UIKit (5.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
   - AWSCognitoIdentityProvider (~> 2.12.0)
   - AWSCore (~> 2.12.0)
   - AWSDynamoDB (~> 2.12.0)
@@ -39,6 +41,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
@@ -47,6 +50,7 @@ SPEC REPOS:
     - SwifterSwift
 
 SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   AWSCognitoIdentityProvider: 4b453fa8ae677dd9646fe5cb137b520105f33d08
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: 0a4431f74d9dbf084d420b887a6a21042b423c5c
@@ -54,6 +58,6 @@ SPEC CHECKSUMS:
   AWSIoT: f8e75c66fa89d99c4496a34137d7204f5e2cbda9
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: 6700da17c5f865189d4f7087fab569110ff30813
+PODFILE CHECKSUM: 1d91b08e6477d0710d71737c5e859ababa8be88f
 
 COCOAPODS: 1.8.4

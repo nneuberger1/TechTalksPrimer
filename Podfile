@@ -24,6 +24,8 @@ target 'TechTalksPrimer' do
     pod 'AWSCognitoIdentityProvider', $awsVersion
     pod 'AWSDynamoDB', $awsVersion
 
+    pod 'Alamofire', '~> 5.0.0-rc.3'
+
     ################################
 
 
