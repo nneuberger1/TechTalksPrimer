@@ -7,7 +7,8 @@ This repository will help you learn some basic things about most typical softwar
 This will be a required list for most development.
 
 * macOS (Catalina) Version 10.5
-* (XCode 11.2 beta 2). (using Swift 5, the LATEST and greatest of Swift)
+* XCode 11.2 beta 2
+  + Uusing Swift 5, the LATEST and greatest of Swift)
   + I have copies of XCode 10.0 - 11.2 if you need it on a portable hard drive.
   + ([Apple Developer website](https://developer.apple.com/))
 * Brew
