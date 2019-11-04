@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A7E63D368ADFB9640E3CC2B /* Pods_TechTalksPrimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBC6D5E5A3FEFBE92EA8437 /* Pods_TechTalksPrimerTests.framework */; };
 		3B66B9AC8B1F6EDBFCAFCAA6 /* Pods_TechTalksPrimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B3A12178B9E6E24EABDA25 /* Pods_TechTalksPrimer.framework */; };
 		99F75D31EB4B8A683AA92FF9 /* Pods_TechTalksPrimer_TechTalksPrimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D48B2A586E9691E4376C356 /* Pods_TechTalksPrimer_TechTalksPrimerUITests.framework */; };
+		FC54BA5F236FCB7700D95381 /* AlamoSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BA5E236FCB7700D95381 /* AlamoSample.swift */; };
+		FC54BA62236FDF5700D95381 /* ChartSupplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BA61236FDF5700D95381 /* ChartSupplement.swift */; };
+		FC54BA64236FE34E00D95381 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54BA63236FE34E00D95381 /* ChartService.swift */; };
 		FCECC6902360997300EF48CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECC68F2360997300EF48CF /* AppDelegate.swift */; };
 		FCECC6922360997300EF48CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECC6912360997300EF48CF /* SceneDelegate.swift */; };
 		FCECC6942360997300EF48CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCECC6932360997300EF48CF /* ContentView.swift */; };
@@ -47,6 +50,9 @@
 		92CDF1F1B0E74133A569EAC1 /* Pods-TechTalksPrimer-TechTalksPrimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTalksPrimer-TechTalksPrimerUITests.release.xcconfig"; path = "Target Support Files/Pods-TechTalksPrimer-TechTalksPrimerUITests/Pods-TechTalksPrimer-TechTalksPrimerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA42491927F09C57BEBE509C /* Pods-TechTalksPrimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTalksPrimer.release.xcconfig"; path = "Target Support Files/Pods-TechTalksPrimer/Pods-TechTalksPrimer.release.xcconfig"; sourceTree = "<group>"; };
 		AEBC6D5E5A3FEFBE92EA8437 /* Pods_TechTalksPrimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechTalksPrimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC54BA5E236FCB7700D95381 /* AlamoSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoSample.swift; sourceTree = "<group>"; };
+		FC54BA61236FDF5700D95381 /* ChartSupplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSupplement.swift; sourceTree = "<group>"; };
+		FC54BA63236FE34E00D95381 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
 		FCECC68C2360997300EF48CF /* TechTalksPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTalksPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCECC68F2360997300EF48CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCECC6912360997300EF48CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,8 +117,16 @@
 				158B12115C9B3A3A86CD35D2 /* Pods-TechTalksPrimerTests.debug.xcconfig */,
 				1514455C4AAE9D4EDEC060CD /* Pods-TechTalksPrimerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC54BA60236FDEB400D95381 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC54BA61236FDF5700D95381 /* ChartSupplement.swift */,
+				FC54BA63236FE34E00D95381 /* ChartService.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FCECC6832360997300EF48CF = {
@@ -140,6 +154,7 @@
 		FCECC68E2360997300EF48CF /* TechTalksPrimer */ = {
 			isa = PBXGroup;
 			children = (
+				FC54BA60236FDEB400D95381 /* Models */,
 				FCECC68F2360997300EF48CF /* AppDelegate.swift */,
 				FCECC6912360997300EF48CF /* SceneDelegate.swift */,
 				FCECC6932360997300EF48CF /* ContentView.swift */,
@@ -147,6 +162,7 @@
 				FCECC69A2360997600EF48CF /* LaunchScreen.storyboard */,
 				FCECC69D2360997600EF48CF /* Info.plist */,
 				FCECC6972360997600EF48CF /* Preview Content */,
+				FC54BA5E236FCB7700D95381 /* AlamoSample.swift */,
 			);
 			path = TechTalksPrimer;
 			sourceTree = "<group>";
@@ -416,6 +432,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC54BA62236FDF5700D95381 /* ChartSupplement.swift in Sources */,
+				FC54BA5F236FCB7700D95381 /* AlamoSample.swift in Sources */,
+				FC54BA64236FE34E00D95381 /* ChartService.swift in Sources */,
 				FCECC6902360997300EF48CF /* AppDelegate.swift in Sources */,
 				FCECC6922360997300EF48CF /* SceneDelegate.swift in Sources */,
 				FCECC6942360997300EF48CF /* ContentView.swift in Sources */,
