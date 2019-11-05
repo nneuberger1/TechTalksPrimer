@@ -10,6 +10,10 @@
 		39A8B6ECE4F1FF1CD7A61F82 /* Pods_TechTalksPrimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9743DCE0B508563B14129531 /* Pods_TechTalksPrimer.framework */; };
 		FC2EDA1E237121A300288579 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA1C237121A300288579 /* ChartService.swift */; };
 		FC2EDA1F237121A300288579 /* ChartSupplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA1D237121A300288579 /* ChartSupplement.swift */; };
+		FC2EDA2523712BED00288579 /* ChartSupplement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2EDA2423712BED00288579 /* ChartSupplement.storyboard */; };
+		FC2EDA2723712D6800288579 /* ChartSupplementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA2623712D6800288579 /* ChartSupplementTableViewController.swift */; };
+		FC2EDA2923712F2C00288579 /* ChartSupplementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA2823712F2C00288579 /* ChartSupplementTableViewCell.swift */; };
+		FC2EDA2B23713DC100288579 /* ChartSupplement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA2A23713DC100288579 /* ChartSupplement+Extensions.swift */; };
 		FC9B055723711E5A004E3618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B055623711E5A004E3618 /* AppDelegate.swift */; };
 		FC9B055923711E5A004E3618 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B055823711E5A004E3618 /* SceneDelegate.swift */; };
 		FC9B055B23711E5A004E3618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B055A23711E5A004E3618 /* ViewController.swift */; };
@@ -24,6 +28,10 @@
 		CA7DB957B4F6F5E56D303537 /* Pods-TechTalksPrimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechTalksPrimer.debug.xcconfig"; path = "Target Support Files/Pods-TechTalksPrimer/Pods-TechTalksPrimer.debug.xcconfig"; sourceTree = "<group>"; };
 		FC2EDA1C237121A300288579 /* ChartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
 		FC2EDA1D237121A300288579 /* ChartSupplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSupplement.swift; sourceTree = "<group>"; };
+		FC2EDA2423712BED00288579 /* ChartSupplement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartSupplement.storyboard; sourceTree = "<group>"; };
+		FC2EDA2623712D6800288579 /* ChartSupplementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSupplementTableViewController.swift; sourceTree = "<group>"; };
+		FC2EDA2823712F2C00288579 /* ChartSupplementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSupplementTableViewCell.swift; sourceTree = "<group>"; };
+		FC2EDA2A23713DC100288579 /* ChartSupplement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartSupplement+Extensions.swift"; sourceTree = "<group>"; };
 		FC9B055323711E5A004E3618 /* TechTalksPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTalksPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9B055623711E5A004E3618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9B055823711E5A004E3618 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2EDA1D237121A300288579 /* ChartSupplement.swift */,
+				FC2EDA2A23713DC100288579 /* ChartSupplement+Extensions.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -77,6 +86,16 @@
 				FC2EDA1C237121A300288579 /* ChartService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		FC2EDA2323712BCF00288579 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC2EDA2423712BED00288579 /* ChartSupplement.storyboard */,
+				FC2EDA2623712D6800288579 /* ChartSupplementTableViewController.swift */,
+				FC2EDA2823712F2C00288579 /* ChartSupplementTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		FC9B054A23711E5A004E3618 = {
@@ -100,6 +119,7 @@
 		FC9B055523711E5A004E3618 /* TechTalksPrimer */ = {
 			isa = PBXGroup;
 			children = (
+				FC2EDA2323712BCF00288579 /* View */,
 				FC2EDA22237121C300288579 /* Services */,
 				FC2EDA20237121A700288579 /* Models */,
 				FC9B055623711E5A004E3618 /* AppDelegate.swift */,
@@ -173,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2EDA2523712BED00288579 /* ChartSupplement.storyboard in Resources */,
 				FC9B056323711E5B004E3618 /* LaunchScreen.storyboard in Resources */,
 				FC9B056023711E5B004E3618 /* Assets.xcassets in Resources */,
 				FC9B055E23711E5A004E3618 /* Main.storyboard in Resources */,
@@ -230,9 +251,12 @@
 			files = (
 				FC2EDA1F237121A300288579 /* ChartSupplement.swift in Sources */,
 				FC2EDA1E237121A300288579 /* ChartService.swift in Sources */,
+				FC2EDA2B23713DC100288579 /* ChartSupplement+Extensions.swift in Sources */,
 				FC9B055B23711E5A004E3618 /* ViewController.swift in Sources */,
+				FC2EDA2923712F2C00288579 /* ChartSupplementTableViewCell.swift in Sources */,
 				FC9B055723711E5A004E3618 /* AppDelegate.swift in Sources */,
 				FC9B055923711E5A004E3618 /* SceneDelegate.swift in Sources */,
+				FC2EDA2723712D6800288579 /* ChartSupplementTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

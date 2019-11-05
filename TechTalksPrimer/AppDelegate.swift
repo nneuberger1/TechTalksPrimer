@@ -11,21 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let chartService = ChartService()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        chartService.fetchCharts { (chartSupplement, error) in
-           if let error = error {
-               print("we have an error: \(error.localizedDescription)")
-           }
-       
-           guard let chartSupplement = chartSupplement else { return }
-           
-           print("we have a chart supplement: \(chartSupplement)")
-        }
         
         return true
     }

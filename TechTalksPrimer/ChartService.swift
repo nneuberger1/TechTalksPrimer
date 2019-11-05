@@ -49,7 +49,7 @@ class ChartService {
                 return
             }
             
-            print("chartSupplement is: \(chartSupplement)")
+//            print("chartSupplement is: \(chartSupplement)")
             callback(chartSupplement, nil)
 
         case .failure(let error):
