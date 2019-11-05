@@ -61,6 +61,12 @@ enum Geoname: String, Codable {
     case nebraska = "NEBRASKA"
     case northDakota = "NORTH DAKOTA"
     case southDakota = "SOUTH DAKOTA"
+    
+    
+    func toString() -> String {
+        return self.rawValue
+    }
+
 }
 
 //
