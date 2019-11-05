@@ -45,12 +45,12 @@ class ChartSupplementTableViewController: UITableViewController {
     
     private func filterMissouriRecords(chartSupplement:ChartSupplement) -> [Edition] {
         
-        let missouriEditions = chartSupplement.edition.filter { (edition) -> Bool in
+        var missouriEditions = chartSupplement.edition.filter { (edition) -> Bool in
             edition.geoname == .missouri
         }
         
         print("missouri records: \(missouriEditions)")
-        return missouriEditions
+        return missouriEditions.removeDuplicates()
     }
 
     // MARK: - Table view data source

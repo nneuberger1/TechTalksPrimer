@@ -22,6 +22,21 @@ extension Product {
     }
 }
 
+extension Edition : Equatable {
+    
+    /**
+     * This allows the SwifterSwift removeDuplicates array function to purge duplicate
+     * records in the data. No idea why they return duplicate data, but we're gonna filter it.
+     *
+     * See ChartSupplementVC filterMissouriRecords function
+     */
+    static func == (lhs: Edition, rhs: Edition) -> Bool {
+        return lhs.geoname == rhs.geoname &&
+            lhs.editionName == rhs.editionName &&
+            lhs.product.url == rhs.product.url
+    }
+}
+
 extension StringProtocol {
     func index<S: StringProtocol>(of string: S, options: String.CompareOptions = []) -> Index? {
         range(of: string, options: options)?.lowerBound
