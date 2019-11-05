@@ -1,6 +1,0 @@
-framework module Pods_TechTalksPrimer_TechTalksPrimerUITests {
-  umbrella header "Pods-TechTalksPrimer-TechTalksPrimerUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
