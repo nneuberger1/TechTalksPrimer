@@ -62,14 +62,12 @@ class ChartSupplementTableViewController: UITableViewController {
         return chartSupplementEditions.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 //        return withoutSwifterTableView(tableView, cellForRowAt: indexPath)
         
         return swifterTableView(tableView, cellForRowAt: indexPath)
     }
-    
     
     /**
      * This is a standard outline of most code that's written without a nice framework that could potentially cause crashes.
@@ -86,11 +84,13 @@ class ChartSupplementTableViewController: UITableViewController {
         return cell
     }
     
+    /**
+     * This is a much easier and crash safe solution using several SwifterSwift functions to safely get objects with using force unwraps in the code
+     */
     private func swifterTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // NOTE SwifterSwift easy to dequeue a cell using Generics to return a safe object that you actually need.
         let cell = tableView.dequeueReusableCell(withClass: ChartSupplementTableViewCell.self, for: indexPath)
-
-
+        
         // NOTE SwifterSwift function to easily and safely get an item from a collection that returns an optional instead of a crash
         guard let edition = self.chartSupplementEditions[safe: indexPath.row] else {
            return UITableViewCell()
