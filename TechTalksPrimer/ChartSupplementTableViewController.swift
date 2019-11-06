@@ -24,7 +24,9 @@ class ChartSupplementTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        chartService.fetchCharts { [weak self] (chartSupplement, error) in
+        let useCachedData = true
+        
+        chartService.fetchCharts(useCachedData: useCachedData) { [weak self] (chartSupplement, error) in
             guard let this = self else { return }
             
              if let error = error {

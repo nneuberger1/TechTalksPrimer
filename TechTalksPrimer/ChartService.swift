@@ -19,48 +19,58 @@ enum ChartServiceError: Error {
 class ChartService {
     
     
-    func fetchCharts(callback:@escaping FetchChartsCallback) {
-      guard let url = URL(string: "https://soa.smext.faa.gov/apra/supplement/chart?edition=current&volume=NORTH%20CENTRAL") else {
-        callback(nil, AFError.createURLRequestFailed(error: ChartServiceError.invalidUrl))
-        return
-      }
-
-      let headers:HTTPHeaders = [.accept("application/json")]
+    func fetchCharts(useCachedData:Bool, callback:@escaping FetchChartsCallback) {
         
-      AF.request(url,
+        let persistedChartSupplement = ChartSupplement.loadData()
+        
+        if useCachedData,
+            let persistedChartSupplement = persistedChartSupplement {
+            
+            callback(persistedChartSupplement, nil)
+            return
+        }
+
+        guard let url = URL(string: "https://soa.smext.faa.gov/apra/supplement/chart?edition=current&volume=NORTH%20CENTRAL") else {
+            callback(nil, AFError.createURLRequestFailed(error: ChartServiceError.invalidUrl))
+            return
+        }
+
+        let headers:HTTPHeaders = [.accept("application/json")]
+
+        AF.request(url,
                         method: .get,
                         parameters: ["edition": "current"],
                         headers: headers)
-      .validate()
-      .responseJSON { response in
+        .validate()
+        .responseJSON { response in
 
-        switch response.result {
-        case .success(let any):
+            switch response.result {
+            case .success(let any):
 
-            print("any object returned: \(any)")
-            
-            guard let data = response.data else {
-                print("data not parsed for chart supplement")
-                return
+                print("any object returned: \(any)")
+                
+                guard let data = response.data else {
+                    print("data not parsed for chart supplement")
+                    return
+                }
+                
+                guard let chartSupplement = try? JSONDecoder().decode(ChartSupplement.self, from: data) else {
+                    print("data not parsed for chart supplement")
+                    return
+                }
+                
+            //            print("chartSupplement is: \(chartSupplement)")
+                
+                if useCachedData {
+                    chartSupplement.storeToDefaults()
+                }
+                
+                callback(chartSupplement, nil)
+
+            case .failure(let error):
+                print("error occurred: \(error.localizedDescription)")
+                callback(nil, error)
             }
-            
-            guard let chartSupplement = try? JSONDecoder().decode(ChartSupplement.self, from: data) else {
-                print("data not parsed for chart supplement")
-                return
-            }
-            
-//            print("chartSupplement is: \(chartSupplement)")
-            callback(chartSupplement, nil)
-
-        case .failure(let error):
-            print("error occurred: \(error.localizedDescription)")
-            callback(nil, error)
         }
-
-
-//        let rooms = rows.flatMap { roomDict in return RemoteRoom(jsonData: roomDict) }
-//        completion(rooms)
-      }
     }
-
 }

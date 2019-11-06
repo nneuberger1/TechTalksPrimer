@@ -1,3 +1,8 @@
+
+
+// DEMO:  This class was generated using https://app.quicktype.io/ to quickly build out a Swift object based on a JSON data structure
+
+
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //

@@ -1,13 +1,35 @@
-//
-//  ChartSupplement+Extensions.swift
-//  TechTalksPrimer
-//
-//  Created by Nicholas Neuberger on 11/4/19.
-//  Copyright © 2019 Nicholas Neuberger. All rights reserved.
-//
-
 import Foundation
 import SwifterSwift
+
+
+/**
+ * DEMO: I'm using extensions that aren't in the same file as ChartSupplement.  Since that class is mostly generated using https://app.quicktype.io/
+ *
+ * Here we implement functionality on top of the classes.
+ */
+
+
+
+extension ChartSupplement {
+    
+    public func storeToDefaults() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(self) {
+            UserDefaults.standard.set(encoded, forKey: "ChartSupplementKey")
+        }
+    }
+    
+    public static func loadData() -> ChartSupplement? {
+        if let savedData = UserDefaults.standard.object(forKey: "ChartSupplementKey") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedChartSupplement = try? decoder.decode(ChartSupplement.self, from: savedData) {
+                return loadedChartSupplement
+            }
+        }
+        
+        return nil
+    }
+}
 
 extension Product {
     
