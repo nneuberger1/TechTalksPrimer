@@ -19,7 +19,7 @@ This will be a required list for most development.
   + https://cocoapods.org/
   
 
-### Add on development tools that I use
+### Add on development tools that I used
 
 * Git Flow (an easier way for team collaboration and production rollout release management)
   + Command:  brew install git-flow
@@ -34,10 +34,24 @@ This will be a required list for most development.
   + A collection of over 500 native Swift extensions, with handy methods, syntactic sugar, and performance improvements for wide range of primitive data types, UIKit and Cocoa classes –over 500 in 1– for iOS, macOS, tvOS and watchOS. 
   + http://swifterswift.com/docs/
 
+* AlamoFire
+  + Elegant HTTP Networking in Swift
+  + https://github.com/Alamofire/Alamofire
+  + https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#introduction
+
+
 ### Samples Git Hub Projects Used:
 
 Here's a list of sample project that I used to help build this sample application.
 
 * https://github.com/awslabs/aws-sdk-ios-samples/tree/master/IoT-Sample/Swift
+
+Sample package manager upcoming for XCode and Swift, that may be a better long term replacement to CocoaPods
+
+* https://developer.apple.com/documentation/xcode/creating_a_swift_package_with_xcode
+
+A good article announcing Apple's Swift programming language is now open source
+
+* https://www.theverge.com/2015/12/3/9842854/apple-swift-open-source-released
 
 

@@ -18,7 +18,6 @@ enum ChartServiceError: Error {
 
 class ChartService {
     
-    
     func fetchCharts(useCachedData:Bool, callback:@escaping FetchChartsCallback) {
         
         let persistedChartSupplement = ChartSupplement.loadData()
@@ -53,6 +52,9 @@ class ChartService {
                     print("data not parsed for chart supplement")
                     return
                 }
+                
+                // DEMO below is using base decoding of objects via NSData.  Alamofire does have custom Response Handlers that can be implemented, but below is easy and clear.
+                //      alternative Handlers: https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#introduction
                 
                 guard let chartSupplement = try? JSONDecoder().decode(ChartSupplement.self, from: data) else {
                     print("data not parsed for chart supplement")
