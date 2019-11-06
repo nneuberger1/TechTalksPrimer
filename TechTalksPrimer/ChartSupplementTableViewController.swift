@@ -14,6 +14,7 @@ class ChartSupplementTableViewController: UITableViewController {
     let chartService = ChartService()
     
     var chartSupplementEditions = [Edition]()
+    var selectedEdition:Edition?
 
     // Airport Charts
     // 217 - Branson airport
@@ -78,6 +79,7 @@ class ChartSupplementTableViewController: UITableViewController {
         // note this line could potentially crash if the row doesn't exist causing a crash.
 //        let edition = self.chartSupplementEditions[indexPath.row - 6]
         let edition = self.chartSupplementEditions[indexPath.row]
+        
                           
         cell.geoName.text = edition.geoname.toString()
         cell.pageNumber.text = edition.product.pageNumber()
@@ -137,14 +139,19 @@ class ChartSupplementTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if segue.identifier == "toChartSupplementDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let edition = self.chartSupplementEditions[safe: indexPath.row]
 
+                if let viewController = segue.destination as? ChartSupplementDetailViewController {
+                    viewController.edition = edition
+                }
+            }
+        }
+    }
 }

@@ -14,6 +14,7 @@
 		FC2EDA2723712D6800288579 /* ChartSupplementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA2623712D6800288579 /* ChartSupplementTableViewController.swift */; };
 		FC2EDA2923712F2C00288579 /* ChartSupplementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA2823712F2C00288579 /* ChartSupplementTableViewCell.swift */; };
 		FC2EDA2B23713DC100288579 /* ChartSupplement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2EDA2A23713DC100288579 /* ChartSupplement+Extensions.swift */; };
+		FC8B012A23736A9700902951 /* ChartSupplementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B012923736A9700902951 /* ChartSupplementDetailViewController.swift */; };
 		FC9B055723711E5A004E3618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B055623711E5A004E3618 /* AppDelegate.swift */; };
 		FC9B055923711E5A004E3618 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B055823711E5A004E3618 /* SceneDelegate.swift */; };
 		FC9B055B23711E5A004E3618 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B055A23711E5A004E3618 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		FC2EDA2623712D6800288579 /* ChartSupplementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSupplementTableViewController.swift; sourceTree = "<group>"; };
 		FC2EDA2823712F2C00288579 /* ChartSupplementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSupplementTableViewCell.swift; sourceTree = "<group>"; };
 		FC2EDA2A23713DC100288579 /* ChartSupplement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartSupplement+Extensions.swift"; sourceTree = "<group>"; };
+		FC8B012923736A9700902951 /* ChartSupplementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSupplementDetailViewController.swift; sourceTree = "<group>"; };
 		FC9B055323711E5A004E3618 /* TechTalksPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTalksPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9B055623711E5A004E3618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9B055823711E5A004E3618 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				FC2EDA2423712BED00288579 /* ChartSupplement.storyboard */,
 				FC2EDA2623712D6800288579 /* ChartSupplementTableViewController.swift */,
 				FC2EDA2823712F2C00288579 /* ChartSupplementTableViewCell.swift */,
+				FC8B012923736A9700902951 /* ChartSupplementDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				FC2EDA1F237121A300288579 /* ChartSupplement.swift in Sources */,
 				FC2EDA1E237121A300288579 /* ChartService.swift in Sources */,
+				FC8B012A23736A9700902951 /* ChartSupplementDetailViewController.swift in Sources */,
 				FC2EDA2B23713DC100288579 /* ChartSupplement+Extensions.swift in Sources */,
 				FC9B055B23711E5A004E3618 /* ViewController.swift in Sources */,
 				FC2EDA2923712F2C00288579 /* ChartSupplementTableViewCell.swift in Sources */,

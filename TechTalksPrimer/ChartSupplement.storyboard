@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,14 +17,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChartSupplementTableViewCell" id="q4z-fj-psU" customClass="ChartSupplementTableViewCell" customModule="TechTalksPrimer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q4z-fj-psU" id="EEE-9O-7Wp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="geoname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9y-KK-6GE">
-                                            <rect key="frame" x="37" y="11" width="185" height="21.5"/>
+                                            <rect key="frame" x="37" y="11" width="185" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="185" id="znk-7i-xf0"/>
                                             </constraints>
@@ -50,6 +51,7 @@
                                 <connections>
                                     <outlet property="geoName" destination="m9y-KK-6GE" id="gqn-af-H6R"/>
                                     <outlet property="pageNumber" destination="UvW-BI-lJ7" id="byd-0s-G1y"/>
+                                    <segue destination="hbP-bb-cgS" kind="showDetail" identifier="toChartSupplementDetail" id="Giq-na-kcA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -66,6 +68,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j12-iS-Qj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="505.79710144927537" y="45.535714285714285"/>
+        </scene>
+        <!--Chart Supplement Detail View Controller-->
+        <scene sceneID="Chs-mm-CdF">
+            <objects>
+                <viewController id="hbP-bb-cgS" customClass="ChartSupplementDetailViewController" customModule="TechTalksPrimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhf-2x-HJx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="page number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-1y-Dbt">
+                                <rect key="frame" x="20" y="150" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="geoname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKe-x5-yde">
+                                <rect key="frame" x="20" y="100" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FSE-7b-nnK"/>
+                    </view>
+                    <connections>
+                        <outlet property="geoname" destination="QKe-x5-yde" id="F7K-4c-LCN"/>
+                        <outlet property="pageNumber" destination="jYh-1y-Dbt" id="khu-9w-BTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3K-04-lGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534.7826086956522" y="49.553571428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jOu-zV-k4u">
