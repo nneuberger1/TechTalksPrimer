@@ -16,9 +16,11 @@ class ChartSupplementTableViewController: UITableViewController {
     var chartSupplementEditions = [Edition]()
 
     // Airport Charts
-    // 217 - Branson
-    // 225 - Columbia
-    
+    // 217 - Branson airport
+    // 225 - Columbia airport
+    // 260 - St Louis Lambert airport
+    // 269 - Washington airport
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,17 +32,12 @@ class ChartSupplementTableViewController: UITableViewController {
              }
          
              guard let chartSupplement = chartSupplement else { return }
+            
 //                 print("we have a chart supplement: \(chartSupplement)")
 
             this.chartSupplementEditions = this.filterMissouriRecords(chartSupplement: chartSupplement)
             this.tableView.reloadData()
         }
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     private func filterMissouriRecords(chartSupplement:ChartSupplement) -> [Edition] {

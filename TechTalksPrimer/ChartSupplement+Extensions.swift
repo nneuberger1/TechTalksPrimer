@@ -29,6 +29,8 @@ extension Edition : Equatable {
      * records in the data. No idea why they return duplicate data, but we're gonna filter it.
      *
      * See ChartSupplementVC filterMissouriRecords function
+     *
+     * Learn more here: https://www.hackingwithswift.com/example-code/language/how-to-conform-to-the-equatable-protocol
      */
     static func == (lhs: Edition, rhs: Edition) -> Bool {
         return lhs.geoname == rhs.geoname &&
