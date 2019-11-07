@@ -55,3 +55,16 @@ A good article announcing Apple's Swift programming language is now open source
 * https://www.theverge.com/2015/12/3/9842854/apple-swift-open-source-released
 
 
+### Some Open Source Data Providers
+
+Here's a collection of researched URLs that I was researching to pull data for the project.
+
+* https://github.com/public-apis/public-apis
+* https://www.metaweather.com/api/
+* https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api
+* http://ron-swanson-quotes.herokuapp.com/v2/quotes/15
+* https://apilist.fun/collection/free-apis
+* https://any-api.com/
+
+
+

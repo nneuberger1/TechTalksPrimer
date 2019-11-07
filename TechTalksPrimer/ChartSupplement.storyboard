@@ -17,23 +17,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChartSupplementTableViewCell" id="q4z-fj-psU" customClass="ChartSupplementTableViewCell" customModule="TechTalksPrimer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q4z-fj-psU" id="EEE-9O-7Wp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="geoname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9y-KK-6GE">
-                                            <rect key="frame" x="37" y="11" width="185" height="21"/>
+                                            <rect key="frame" x="37" y="11" width="161" height="21.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="185" id="znk-7i-xf0"/>
+                                                <constraint firstAttribute="width" constant="161" id="znk-7i-xf0"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-BI-lJ7">
-                                            <rect key="frame" x="238" y="11" width="161" height="21"/>
+                                            <rect key="frame" x="206" y="11" width="188" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -41,11 +41,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="m9y-KK-6GE" firstAttribute="centerY" secondItem="EEE-9O-7Wp" secondAttribute="centerY" id="Byk-eB-MdK"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="UvW-BI-lJ7" secondAttribute="trailing" constant="-5" id="FAk-FD-dmI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UvW-BI-lJ7" secondAttribute="trailing" id="FAk-FD-dmI"/>
                                         <constraint firstItem="m9y-KK-6GE" firstAttribute="top" secondItem="EEE-9O-7Wp" secondAttribute="topMargin" id="Uuk-Uk-EYV"/>
                                         <constraint firstItem="m9y-KK-6GE" firstAttribute="leading" secondItem="EEE-9O-7Wp" secondAttribute="leadingMargin" constant="17" id="Xxr-f7-sAB"/>
                                         <constraint firstItem="UvW-BI-lJ7" firstAttribute="firstBaseline" secondItem="m9y-KK-6GE" secondAttribute="firstBaseline" id="gLW-gN-4Xy"/>
-                                        <constraint firstItem="UvW-BI-lJ7" firstAttribute="leading" secondItem="m9y-KK-6GE" secondAttribute="trailing" constant="16" id="jXw-WU-hKN"/>
+                                        <constraint firstItem="UvW-BI-lJ7" firstAttribute="leading" secondItem="m9y-KK-6GE" secondAttribute="trailing" constant="8" id="jXw-WU-hKN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -77,27 +77,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="page number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-1y-Dbt">
-                                <rect key="frame" x="20" y="150" width="374" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="page number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYh-1y-Dbt">
+                                <rect key="frame" x="20" y="140" width="374" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="geoname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKe-x5-yde">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="geoname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKe-x5-yde">
                                 <rect key="frame" x="20" y="100" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-wM-juT">
+                                <rect key="frame" x="20" y="213" width="374" height="595"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="595" id="JTh-0Y-nXe"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="bottom" secondItem="FSE-7b-nnK" secondAttribute="bottom" id="AL9-KV-9Dg"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="top" secondItem="jYh-1y-Dbt" secondAttribute="bottom" constant="8" id="VXI-eZ-Gwz"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="leading" secondItem="fhf-2x-HJx" secondAttribute="leadingMargin" id="gy4-K7-eJD"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="leading" secondItem="jYh-1y-Dbt" secondAttribute="leading" id="o6M-Va-MSD"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="trailing" secondItem="jYh-1y-Dbt" secondAttribute="trailing" id="pvN-b8-Cdv"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="leading" secondItem="QKe-x5-yde" secondAttribute="leading" id="ufN-rK-kNz"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="trailing" secondItem="fhf-2x-HJx" secondAttribute="trailingMargin" id="xIe-v3-Tda"/>
+                            <constraint firstItem="U4k-wM-juT" firstAttribute="trailing" secondItem="QKe-x5-yde" secondAttribute="trailing" id="zft-FU-bsa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FSE-7b-nnK"/>
                     </view>
                     <connections>
                         <outlet property="geoname" destination="QKe-x5-yde" id="F7K-4c-LCN"/>
                         <outlet property="pageNumber" destination="jYh-1y-Dbt" id="khu-9w-BTW"/>
+                        <outlet property="webView" destination="U4k-wM-juT" id="Vzi-AS-oMm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3K-04-lGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

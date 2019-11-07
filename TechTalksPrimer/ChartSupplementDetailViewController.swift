@@ -7,30 +7,67 @@
 //
 
 import UIKit
+import WebKit
 
 class ChartSupplementDetailViewController: UIViewController {
     
     @IBOutlet weak var geoname: UILabel!
     @IBOutlet weak var pageNumber: UILabel!
+    @IBOutlet weak var webView: WKWebView!
     
     var edition:Edition?
+    
+    let session =  URLSession(configuration: URLSessionConfiguration.default)
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         geoname.text = edition?.geoname.toString()
         pageNumber.text = edition?.product.pageNumber()
+                
+        loadPdf()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /**
+     * This was the final solution when I finally realized that iOS (out of box apps) will NOT connect to a NON secure http endpoint
+     * without having the security policy set in the Info.plist.
+     * https://stackoverflow.com/questions/32631184/the-resource-could-not-be-loaded-because-the-app-transport-security-policy-requi
+     */
+    private func loadPdf() {
+        if let edition = edition,
+           let url = URL(string: edition.product.url) {
+                  webView.load(URLRequest(url: url))
+        }
     }
-    */
+    
+    /**
+     * This was an old attempt at some boiler plate code to store a PDF to disk and load it once on disk.  Some of the forums
+     * suggest that it must be downloaded first, but that's not really true.  The above solution pulls it immediatly from the web.
+     */
+    private func loadPdfOld() {
+        if let edition = edition {
+            let request = URLRequest(url:  URL(string: edition.product.url)!)
+            let task = session.dataTask(with: request, completionHandler: {(data, response, error) in
+                if error == nil{
+                    if let pdfData = data {
+                        let pathURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(edition.product.pageNumber())
+                        do {
+                            try pdfData.write(to: pathURL, options: .atomic)
+                        }catch{
+                            print("Error while writting")
+                        }
 
+                        DispatchQueue.main.async {
+                            self.webView.load(URLRequest(url: pathURL))
+                        }
+                    }
+                }else{
+                    print(error?.localizedDescription ?? "")
+                }
+            });
+            task.resume()
+        }
+    }
 }
