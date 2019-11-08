@@ -8,6 +8,8 @@ The app pulls FAA Chart Supplement data from an open web service and displays th
 
 * Make a Web Service call to an endpoint using a get request.
   + The app uses Alamofire to ease the pain
+* Stores the web service data structure to User Defaults to mimic code for an "offline mode" type solution
+  + The app uses the Codable protocol to retrieve and save the data to user defaults.
 * Renders the Response data easily
   + The app uses the Codable protocol to render the objects easily
 * Displays data on a List page from the WS call
