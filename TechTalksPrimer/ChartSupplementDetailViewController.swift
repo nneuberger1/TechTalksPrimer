@@ -19,11 +19,11 @@ class ChartSupplementDetailViewController: UIViewController {
     
     let session =  URLSession(configuration: URLSessionConfiguration.default)
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // DEMO: refactor to use guard let check on edition / pass to loadPdf.  Less optionals = easier code = less code issues.
+        
         geoname.text = edition?.geoname.toString()
         pageNumber.text = edition?.product.pageNumber()
                 
