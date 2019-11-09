@@ -14,6 +14,8 @@ target 'TechTalksPrimer' do
 
     pod 'SwifterSwift'
 
+    pod 'SCLAlertView'
+
     ################################
     # Amazon Centric Libraries
 

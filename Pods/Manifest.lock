@@ -9,6 +9,7 @@ PODS:
     - AWSCore (= 2.12.1)
   - AWSIoT (2.12.1):
     - AWSCore (= 2.12.1)
+  - SCLAlertView (0.8)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - AWSCore (~> 2.12.0)
   - AWSDynamoDB (~> 2.12.0)
   - AWSIoT (~> 2.12.0)
+  - SCLAlertView
   - SwifterSwift
 
 SPEC REPOS:
@@ -47,6 +49,7 @@ SPEC REPOS:
     - AWSCore
     - AWSDynamoDB
     - AWSIoT
+    - SCLAlertView
     - SwifterSwift
 
 SPEC CHECKSUMS:
@@ -56,8 +59,9 @@ SPEC CHECKSUMS:
   AWSCore: 0a4431f74d9dbf084d420b887a6a21042b423c5c
   AWSDynamoDB: 517a859d6b4615ca8f7e78f03bd33e3ad955d539
   AWSIoT: f8e75c66fa89d99c4496a34137d7204f5e2cbda9
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: cd8f3a635abd950b8ffbef76722f1f988675a86b
+PODFILE CHECKSUM: 5e4c34e6d08bbd6bfbc3de60003ce0a43d775b0d
 
 COCOAPODS: 1.8.4

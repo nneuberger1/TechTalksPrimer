@@ -5,4 +5,5 @@ ${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework
 ${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework
 ${BUILT_PRODUCTS_DIR}/AWSIoT/AWSIoT.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework
 ${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework

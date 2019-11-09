@@ -8,6 +8,7 @@
 
 import UIKit
 import SwifterSwift
+import SCLAlertView
 
 class ChartSupplementTableViewController: UITableViewController {
     
@@ -24,6 +25,8 @@ class ChartSupplementTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SCLAlertView().showInfo("Hello World", subTitle: "Tiger Hacks...!!")
         
         let useCachedData = true
         
