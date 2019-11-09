@@ -50,6 +50,8 @@ class ChartSupplementTableViewController: UITableViewController {
         }
         
         print("missouri records: \(missouriEditions)")
+        
+        // NOTE SwifterSwift function to remove duplicates from this JSON response above.
         return missouriEditions.removeDuplicates()
     }
 
