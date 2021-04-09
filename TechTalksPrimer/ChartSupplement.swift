@@ -41,14 +41,14 @@ struct Edition: Codable {
     let editionName: EditionName
     let format: Format
     let volume: Volume
-    let editionDate: EditionDate
+    let editionDate: String
     let editionNumber: Int
     let product: Product
 }
 
-enum EditionDate: String, Codable {
-    case the10102019 = "10/10/2019"
-}
+//enum EditionDate: String, Codable {
+//    case the10102019 = "10/10/2019"
+//}
 
 enum EditionName: String, Codable {
     case current = "CURRENT"

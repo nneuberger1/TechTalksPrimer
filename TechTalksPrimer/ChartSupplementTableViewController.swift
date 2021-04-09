@@ -26,7 +26,7 @@ class ChartSupplementTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SCLAlertView().showInfo("Hello World", subTitle: "Tiger Hacks...!!")
+        SCLAlertView().showInfo("Welcome to...", subTitle: "Pick Hacks...!!")
         
         let useCachedData = true
         

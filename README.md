@@ -22,10 +22,9 @@ The app pulls FAA Chart Supplement data from an open web service and displays th
 
 This will be a required list for most development.
 
-* macOS (Catalina) Version 10.5
-* XCode 11.2 beta 2
-  + Uusing Swift 5, the LATEST and greatest of Swift)
-  + I have copies of XCode 10.0 - 11.2 if you need it on a portable hard drive.
+* macOS (Catalina) Version 10.5 or higher
+* XCode 12.4
+  + Using Swift 5, the LATEST and greatest of Swift)
   + ([Apple Developer website](https://developer.apple.com/))
 * Brew
   + The missing package manager for macOS (or Linux))
